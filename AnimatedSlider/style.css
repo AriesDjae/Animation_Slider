@@ -1,5 +1,7 @@
 @import url('https://fonts.cdnfonts.com/css/chinese-rocks');
 @import url('https://fonts.cdnfonts.com/css/sf-speakeasy-2');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://ufonts.com/fonts/toronto-gothic.html');
 
 body {
     font-family: 'Chinese Rocks Rg', sans-serif;
@@ -57,16 +59,16 @@ header nav a {
     width: 1200px;
     max-width: 80%;
     margin: auto;
-    top: 15%;
+    top: 7%;
     margin-left: 50px;
 }
 
 .title{
-    font-size: 65px;
+    font-size: 70px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 80px;
     text-shadow: 
         10px 10px 0 #000, 
        -10px -10px 0 #000,  
@@ -94,10 +96,10 @@ header nav a {
         0px -7px 0 #000; 
 }    
 h1 {
-    font-size: 170px;
+    font-size: 180px;
     position: absolute;
-    margin-left: 37%;
-    top: -30px;
+    margin-left: 31%;
+    top: -29px;
     font-family: 'SF Speakeasy', sans-serif;
     letter-spacing: 0px;
     color:#FE0000;
@@ -126,4 +128,28 @@ h1 {
        -7px  0px 0 #000,  
         0px  7px 0 #000,  
         0px -7px 0 #000;
+}
+
+.name {
+    font-size: 50px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    line-height: 50px;
+    margin-bottom: 20px;
+}
+
+
+.slider .list .item .detail p {
+    font-size: 20px;
+    letter-spacing: 0;
+    font-weight: 600;
+    font-family: 'TorontoGothic', sans-serif;
+    width: 70%;
+    margin-top: 20px;
+}
+
+.slider .list .item .detail q {
+    margin-bottom: 20px;
+    font-size: 24px;
+    width: 600px;
 }

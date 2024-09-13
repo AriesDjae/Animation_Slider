@@ -154,7 +154,7 @@ h1 {
     margin-bottom: 30px;
 }
 
-q.quote i {
+.quote {
     font-size: 40px;
     width: 600px;
 }
@@ -245,4 +245,28 @@ button {
 
 .arrows button:hover {
     color: #000;
+}
+
+/* Starting animation */
+.item:nth-child(1) {
+    z-index: 1;
+}
+
+.item:nth-child(1) .title,
+.item:nth-child(1) .name,
+.item:nth-child(1) .quote,
+.item:nth-child(1) .desc,
+.item:nth-child(1) .more {
+    transform: translateY(75px);
+    filter: blur(75px);
+    opacity: 0;
+    animation: showDetail 0.75s 1s linear 1 forwards;
+}
+
+@keyframes showDetail {
+    to{
+    transform: translateY(0);
+    filter: blur(0);
+    opacity: 1;
+    }
 }

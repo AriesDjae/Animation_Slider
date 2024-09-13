@@ -175,6 +175,8 @@ q.quote i {
     transition: 0.75s;
 }
 
+/* thumbnail */
+
 .thumbnail {
     position: absolute;
     bottom: 50px;
@@ -185,31 +187,35 @@ q.quote i {
     z-index: 1;
 }
 
-.thumbnail .item {
-    width: 150px;
+.thumbnail .item-tmb {
+    width: 180px;
     height: 220px;
     flex-shrink: 0;
     position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    bottom: 10px;
 }
 
-.thumbnail .item img {
+.thumbnail .item-tmb .img-tmb {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border: 15px;
+    object-position: right center;
 }
 
-.thumbnail .item .detail{
+.thumbnail .item-tmb .detail-tmb{
     position: absolute;
     border: 15px;
     left: 10px;
     right: 10px;
 }
 
-.thumbnail .item .detail .name {
+.thumbnail .item-tmb .detail-tmb .name-tmb {
     font-weight: 900;
     font-size: 1rem;
-    text-align: right;
+    text-align: center;
     margin-bottom: 5px;
     text-shadow: 1px 1px 1px #000;
     color: #fff;

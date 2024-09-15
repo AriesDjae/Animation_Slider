@@ -289,7 +289,7 @@ button {
 
 /* action next */
 
-.item:nth-child(1) > img {
+.slider.next .list .item:nth-child(1) > img {
     width: 150px;
     height: 220px;
     position: absolute;
@@ -309,7 +309,7 @@ button {
     }
 }
 
-.item:nth-last-child() {
+.slider.next .thumbnail .item:nth-last-child(1) {
     width: 0;
     overflow: hidden;
     opacity: 0;
@@ -338,11 +338,11 @@ button {
 
 /* action prev */
 
-.item:nth-child(2) {
+.slider.prev .list .item:nth-child(2) {
     z-index: 2;
 }
 
-.item:nth-child(2) > img{
+.slider.prev .list .item:nth-child(2) > img{
     position: absolute;
     bottom: 0;
     left: 0;
@@ -366,21 +366,61 @@ button {
     animation: showTmb 0.5s linear 1 forwards;
 }
 
-.slider.prev .item:nth-child(1) .title,
-.slider.prev .item:nth-child(1) .name,
-.slider.prev .item:nth-child(1) .quote,
-.slider.prev .item:nth-child(1) .desc,
-.slider.prev .item:nth-child(1) .more {
-    transform: translateY(75px);
-    filter: blur(75px);
-    opacity: 0;
-    animation: showDetail 0.75s 1s linear 1 forwards;
+.slider.prev .item:nth-child(2) .title,
+.slider.prev .item:nth-child(2) .name,
+.slider.prev .item:nth-child(2) .quote,
+.slider.prev .item:nth-child(2) .desc,
+.slider.prev .item:nth-child(2) .more {
+    animation: hideDetail 0.5s 1s linear 1 forwards;
 }
 
-@keyframes showDetail {
+@keyframes hideDetail {
     to{
-    transform: translateY(0);
-    filter: blur(0);
-    opacity: 1;
+    transform: translateY(-150px);
+    filter: blur(20px);
+    opacity: 0;
+    }
+}
+
+.slider.next .arrows button, 
+.slider.prev .arrows button {
+    pointer-events: none;
+}
+
+.loader {
+    width: 0;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    left: 0;
+}
+
+.slider.next .loader,
+.slider.prev .loader {
+    width: 100%;
+    animation: loadTime 2s linear 1 forwards;
+}
+
+@keyframes loadTime {
+    to {
+        width: 0;
+    }
+}
+
+/* Mobile screen */
+
+@media screen and (max-width: 678px) {
+    .slider .list .item .detail .title {
+        font-size: 20px;
+    }
+
+    .slider .list .item .detail .name {
+        font-size: 18px;
+    }
+
+    .slider .list .item .detail h1 {
+        font-size: 20px;
     }
 }

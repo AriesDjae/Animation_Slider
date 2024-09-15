@@ -63,6 +63,10 @@ img {
 }
 
 .title{
+    width:500px;
+    position: relative;
+    display: flex;
+    align-items:center;
     font-size: 70px;
     font-weight: 600;
     text-transform: uppercase;
@@ -95,6 +99,8 @@ img {
         0px -7px 0 #000; 
 }    
 h1 {
+    width: 350px;
+    position: center;
     font-size: 180px;
     position: absolute;
     margin-left: 31%;
@@ -413,14 +419,24 @@ button {
 
 @media screen and (max-width: 678px) {
     .slider .list .item .detail .title {
-        font-size: 20px;
+        margin-top: 20px;
+        width: 300px;
+        font-size: 35px;
+        left: 10px;
     }
 
     .slider .list .item .detail .name {
-        font-size: 18px;
+        font-weight: 600;
+        width: 275px;
+        position: center;
+        font-size: 24px;
+        letter-spacing: 2px;
     }
 
     .slider .list .item .detail h1 {
-        font-size: 20px;
+        width: 300px;
+        font-size: 90px;
+        left: 135px;
+        top: 5px;
     }
 }
